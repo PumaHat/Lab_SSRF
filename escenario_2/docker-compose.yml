@@ -1,0 +1,42 @@
+version: '3.1'
+services:
+  kali:
+    build: ./containers/kali/
+    container_name: "hacker"
+    networks:
+      - segmentone
+
+  web_page:
+    build: ./containers/web_page/
+    container_name: "web_SSRF"
+    networks:
+      - segmentone
+      - segmenttwo
+    volumes:
+      - ./containers/web_page/site/:/var/www/html
+
+  internal_server:
+    build: ./containers/internal_server/
+    container_name: "interno"
+    networks:
+      - segmenttwo
+
+
+networks:
+  segmentone:
+    name: production
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/24
+
+  segmenttwo:
+    name: internal
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.20.0.0/24
+
+
