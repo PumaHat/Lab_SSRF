@@ -3,13 +3,13 @@
 
 Laboratorio diseñado para practicar la vulnerabilidad web SSRF (Server Side Request Forgery)
 
-## 💻 Escenario 1 
+## 💻 [Escenario 1](https://github.com/PumaHat/Lab_SSRF?tab=readme-ov-file#escenario1)
 
 ![](./images/Escenario1.png)
 
 El primer escenario planteado en estos laboratorios
 
-## 💻 Escenario 2 
+## 💻 [Escenario 2](https://github.com/PumaHat/Lab_SSRF?tab=readme-ov-file#escenario2)
 
 ![](./images/Escenario2.png)
 
@@ -31,7 +31,7 @@ cd escenario_1/
 docker-compose up
 ```
 
-### Escenario1
+### Escenario2
 
 Estos son los comandos para desplegar el segundo escenario
 ```bash
